@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <title>Nhận diện khuôn mặt</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+</head>
+<!-- Coded with love by Mutiullah Samim-->
+
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <a href="index.html" class="navbar-brand">Nhận diện idol</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <a href="#aboutUs" class="nav-item active nav-link">Về trang web</a>
+                <a href="#guide" class="nav-item active nav-link">Hướng dẫn sử dụng</a>
+                <a href="#list-idols" class="nav-item active nav-link">Danh sách idol</a>
+                <a href="#author" class="nav item active nav-link">Về tác giả</a>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="text-center text-uppercase my-row my-head">
+        <h2>Nhận diện idol</h2>
+        <p>Copy url ảnh bạn cần tìm vào ô dưới đây</p>
+    </div>
+
+    <div class="container h-100 my-row">
+        <div class="d-flex justify-content-center h-100">
+            <div class="searchbar">
+                <input id="input-url" class="search_input" type="text" name="url" placeholder="Search...">
+                <a href="#" id="btn-submit" class="search_icon">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading">
+        <img src="images/ajax-loader.gif" />
+    </div>
+
+    <div id="div-result" class="col-md-12 no-padding lib-item my-row" data-category="view">
+        <div class="lib-panel">
+            <div class="row box-shadow">
+                <div id="div-img" class="col-md-6">
+                    <img id="img-result" class="lib-img-show" src="images/download.jpg">
+                </div>
+                <div class="col-md-6">
+                    <div class="lib-row lib-header">
+                        KẾT QUẢ TÌM KIẾM:
+                        <div class="lib-header-seperator"></div>
+                    </div>
+                    <div id="result" class="lib-row lib-desc">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 my-row" style="margin-top: 100px" id="aboutUs">
+        Trang web được tạo ra với mục đích hỗ trợ mọi người trong việc kiếm info về các diễn viên nữ trong ngành giải trí của đất
+        nước mặt trời mọc. Hy vọng từ giờ anh em không còn phải comment xin link trên facebook nữa.
+    </div>
+
+    <div class="col-md-12 my-row" style="margin-top: 100px" id="guide">
+        Để tìm 1 idol bạn cần 1 đường link dẫn tới ảnh - không phải link google search nhé(tốt nhất đường link có dạng http:// hoặc
+        https://). Để đảm bảo độ chính xác các bạn nên tìm những ảnh chân dung 1 người, ít phong cảnh và những thứ xunh quanh.
+    </div>
+
+    <div class="col-md-12 my-row" id="list-idols">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Category:Japanese_pornographic_film_actresses">Danh sách idol</a>. Ngoài danh sách trên trang web có thể tìm info một số thánh nữ ở việt nam VD: Ngọc Trinh, Chi
+        Pu,... Nếu idol bạn tìm nằm ngoài danh sách này thì sẽ không thể tìm thấy được nhé.
+    </div>
+
+    <div class="col-md-12 my-row" style="margin-top: 100px" id="author">
+        Tác giả:
+        <a target="_blank" href="https://github.com/kkhanhluu">Cẩu aka Cậu bé da màu aka Hoàng tử Congo</a>. Trang web này được lấy cảm hứng từ
+        <a href="_blank" href="https://toidicodedao.com/">Tôi đi code dạo</a>. Bất cứ đóng góp hay tài liệu học tập nào hay mọi người có thể gửi cho mình nhé.
+    </div>
+
+    <div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Không thể tìm thấy</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Xem lại đường link ảnh của bạn hoặc idol bạn tìm không có trong dữ liệu :(
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+
+    a {
+        text-decoration:none;
+        color: blue;
+    }
+    body,html{
+        font-family: 'Poppins', sans-serif;
+        background: blanchedalmond !important;
+        }
+        .my-head h2 {
+            font-size: 35px;
+        }
+        .my-row {
+            margin-top: 20px;
+        }
+
+        #loading {
+            display: none;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #list-idols {
+            margin-top: 100px;
+        }
+        .searchbar{
+        margin-bottom: auto;
+        margin-top: auto;
+        height: 60px;
+        background-color: #353b48;
+        border-radius: 30px;
+        padding: 10px;
+        }
+    
+        .search_input{
+        color: white;
+        border: 0;
+        outline: 0;
+        background: none;
+        width: 0;
+        line-height: 40px;
+        transition: width 0.4s linear;
+        }
+    
+        .searchbar:hover > .search_input{
+        padding: 0 10px;
+        width: 450px;
+        transition: width 0.4s linear;
+        }
+    
+        .searchbar:hover > .search_icon{
+        background: white;
+        color: #e74c3c;
+        }
+    
+        .search_icon{
+        height: 40px;
+        width: 40px;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color:white;
+        }
+
+    /** search result **/
+    #div-result {
+        display: none;
+    }
+   .lib-item {
+        display: flex; 
+        justify-content: center;
+    }
+    
+    .lib-panel {
+        margin-bottom: 20Px;
+    }
+    .lib-panel img {
+        width: 100%;
+        background-color: transparent;
+    }
+    
+    .lib-panel .row,
+    .lib-panel .col-md-6 {
+        padding: 0;
+        background-color: #FFFFFF;
+    }
+    
+    
+    .lib-panel .lib-row {
+        padding: 0 20px 0 20px;
+    }
+    
+    .lib-panel .lib-row.lib-header {
+        background-color: #FFFFFF;
+        font-size: 20px;
+        padding: 10px 20px 0 20px;
+    }
+    
+    .lib-panel .lib-row.lib-header .lib-header-seperator {
+        height: 2px;
+        width: 26px;
+        background-color: #d9d9d9;
+        margin: 7px 0 7px 0;
+    }
+    
+    .lib-panel .lib-row.lib-desc {
+        position: relative;
+        height: 100%;
+        display: block;
+        font-size: 13px;
+    }
+    .lib-panel .lib-row.lib-desc a{
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        left: 20px;
+    }
+    
+    .row-margin-bottom {
+        margin-bottom: 20px;
+    }
+    
+    .box-shadow {
+        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+    }
+    
+    .no-padding {
+        padding: 0;
+    }
+    
+
+    
